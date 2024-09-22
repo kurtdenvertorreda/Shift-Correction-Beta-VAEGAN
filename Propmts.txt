@@ -1,0 +1,13 @@
+I have a dataset in a folder containing 100 SVC files.
+Each SVC file represents a time series drawing of a clock.
+The drawings are sampled at 100 points per second.
+The length of each time series varies because different users draw at different speeds (some draw quickly, while others draw slowly).
+Consequently, each SVC file has a different number of rows (i.e., data points).
+Columns in Each SVC File:
+
+Each SVC file contains columns: x, y, timestamp, pen_status, pressure, azimuth, and altitude.
+I am primarily interested in using the x, y, and pen_status columns for training.
+Augmented Data Generation Goal:
+
+When generating augmented data, I want the output to resemble a new clock drawing that captures the common characteristics learned from all 100 files.
+The augmented data should have similar properties to a single handwriting task, as if a new user is drawing a clock.
